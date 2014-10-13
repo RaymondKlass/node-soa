@@ -1,0 +1,14 @@
+{
+  "name": "node-soa",
+  "version": "0.0.1",
+  "description": "SOA App coded in Node.js",
+  "Author": "Raymond Klass <raymond.klass@gmail.com> (https://github.com/RaymondKlass)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaymondKlass/node-soa"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "^1.8"
+  }
+}
