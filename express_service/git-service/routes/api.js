@@ -58,6 +58,15 @@ router.route('/beers/:beer_id')
             });
             
         });
+    })
+    
+    .delete(function(req, res) {
+        Beer.remove({_id:req.params.beer_id}, function(err) {
+            if (err) {
+              res.send(err);
+            }
+            res.json({message: 'Successfully Deleted'})
+        })
     });
 
 
