@@ -20,6 +20,15 @@ router.route('/beers')
         });
     
     
+    })
+    
+    .get(function(req, res) {
+        Beer.find(function(err, beers) {
+            if (err) {
+                res.send(err);
+            }
+            res.json(beers);
+        });
     });
 
 module.exports = router;
