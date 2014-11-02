@@ -30,5 +30,19 @@ router.route('/beers')
             res.json(beers);
         });
     });
+    
+
+router.route('/beers/:beer_id')
+    .get(function(req, res) {
+        Beer.findById(req.params.beer_id, function(err, beer) {
+            if (err) {
+              res.send(err);
+            }
+            res.json(beer);
+        });
+    
+    });
+
+
 
 module.exports = router;
