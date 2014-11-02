@@ -41,6 +41,23 @@ router.route('/beers/:beer_id')
             res.json(beer);
         });
     
+    })
+    
+    .put(function(req, res) {
+        Beer.findById(req.params.beer_id, function(err, beer) {
+            if (err) {
+              res.send(err);
+            }
+            
+            beer.name = req.body.name;
+            beer.save(function(err) {
+                if (err) {
+                  res.send(err);
+                }
+                res.json({message: 'Beer Updated'})
+            });
+            
+        });
     });
 
 
