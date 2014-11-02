@@ -1,0 +1,11 @@
+{
+  "name": "express_service",
+  "version": "1.0.0",
+  "description": "First Express service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
